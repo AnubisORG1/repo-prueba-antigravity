@@ -3,15 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Desarrollador Full-Stack | Portafolio Profesional</title>
-    <meta name="description" content="Portafolio profesional de desarrollo web, UI/UX y creación de soluciones tecnológicas modernas y escalables.">
+    <title>Desarrollo de Páginas Web y Tiendas en Línea</title>
+    <meta name="description" content="Diseño y creación de páginas web profesionales, rápidas y fáciles de usar para hacer crecer tu negocio.">
     
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Tailwind CSS (CDN para estáticos rápidos y diseño premium) -->
+    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -19,21 +19,6 @@
                 extend: {
                     fontFamily: {
                         sans: ['"Plus Jakarta Sans"', 'sans-serif'],
-                    },
-                    colors: {
-                        brand: {
-                            50: '#eff6ff',
-                            100: '#dbeafe',
-                            400: '#60a5fa',
-                            500: '#3b82f6',
-                            600: '#2563eb',
-                            900: '#1e3a8a',
-                        },
-                        dark: {
-                            900: '#0f172a',
-                            800: '#1e293b',
-                            700: '#334155'
-                        }
                     },
                     animation: {
                         'fade-in-up': 'fadeInUp 0.8s ease-out forwards',
@@ -55,269 +40,284 @@
     <!-- Lucide Icons -->
     <script src="https://unpkg.com/lucide@latest"></script>
 </head>
-<body class="bg-dark-900 text-slate-300 font-sans antialiased overflow-x-hidden selection:bg-brand-500 selection:text-white">
+<body class="bg-white text-zinc-900 font-sans antialiased overflow-x-hidden selection:bg-black selection:text-white">
 
     <!-- Navbar -->
-    <header class="fixed top-0 w-full z-50 transition-all duration-300" id="navbar">
-        <div class="absolute inset-0 bg-dark-900/80 backdrop-blur-md border-b border-white/5 shadow-sm"></div>
+    <header class="fixed top-0 w-full z-50 transition-all duration-300 bg-white/80 backdrop-blur-md border-b border-zinc-200" id="navbar">
         <div class="max-w-7xl mx-auto px-6 h-20 relative flex items-center justify-between">
-            <a href="#" class="text-2xl font-bold text-white tracking-tight flex items-center gap-2 group">
-                <div class="w-8 h-8 rounded-lg bg-gradient-to-tr from-brand-600 to-brand-400 flex items-center justify-center text-white shadow-lg group-hover:scale-105 transition-transform">
-                    <i data-lucide="code-2" class="w-5 h-5"></i>
+            <a href="#" class="text-2xl font-bold text-black tracking-tight flex items-center gap-2">
+                <div class="w-8 h-8 rounded-lg bg-black flex items-center justify-center text-white">
+                    <i data-lucide="monitor" class="w-5 h-5"></i>
                 </div>
-                <span>Dev<span class="text-brand-400">Pro</span></span>
+                <span>Creación<span class="text-zinc-500">Web</span></span>
             </a>
             
             <nav class="hidden md:flex items-center gap-8">
-                <a href="#servicios" class="text-sm font-medium hover:text-white transition-colors">Servicios</a>
-                <a href="#proyectos" class="text-sm font-medium hover:text-white transition-colors">Proyectos</a>
-                <a href="#cotizacion" class="text-sm font-medium hover:text-white transition-colors">Cotización</a>
-                <a href="#contacto" class="text-sm font-medium bg-white/10 hover:bg-white/20 text-white px-5 py-2.5 rounded-full transition-all border border-white/10">Contacto</a>
+                <a href="#beneficios" class="text-sm font-medium text-zinc-600 hover:text-black transition-colors">¿Por qué tener una web?</a>
+                <a href="#paquetes" class="text-sm font-medium text-zinc-600 hover:text-black transition-colors">Paquetes</a>
+                <a href="#cotizacion" class="text-sm font-medium text-zinc-600 hover:text-black transition-colors">A medida</a>
+                <a href="#contacto" class="text-sm font-medium bg-black hover:bg-zinc-800 text-white px-5 py-2.5 rounded-full transition-all">Contacto</a>
             </nav>
 
-            <button class="md:hidden text-slate-300 hover:text-white transition-colors" id="mobile-menu-btn" aria-label="Abrir menú">
+            <button class="md:hidden text-zinc-900" id="mobile-menu-btn" aria-label="Abrir menú">
                 <i data-lucide="menu" class="w-6 h-6"></i>
             </button>
         </div>
         
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-dark-800 border-b border-white/5 shadow-xl">
+        <div id="mobile-menu" class="hidden md:hidden absolute top-20 left-0 w-full bg-white border-b border-zinc-200 shadow-xl">
             <div class="flex flex-col p-6 gap-4">
-                <a href="#servicios" class="text-base font-medium hover:text-white mobile-link">Servicios</a>
-                <a href="#proyectos" class="text-base font-medium hover:text-white mobile-link">Proyectos</a>
-                <a href="#cotizacion" class="text-base font-medium hover:text-white mobile-link">Cotización</a>
-                <a href="#contacto" class="text-base font-medium text-brand-400 mobile-link mt-2">Contacto</a>
+                <a href="#beneficios" class="text-base font-medium text-zinc-600 hover:text-black mobile-link">¿Por qué tener una web?</a>
+                <a href="#paquetes" class="text-base font-medium text-zinc-600 hover:text-black mobile-link">Paquetes</a>
+                <a href="#cotizacion" class="text-base font-medium text-zinc-600 hover:text-black mobile-link">A medida</a>
+                <a href="#contacto" class="text-base font-medium text-black mobile-link mt-2">Contacto</a>
             </div>
         </div>
     </header>
 
     <main>
         <!-- Hero Section -->
-        <section class="relative min-h-screen flex items-center justify-center pt-20 pb-12 overflow-hidden">
-            <!-- Background effects -->
-            <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-brand-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-            <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-indigo-600/20 rounded-full blur-[120px] pointer-events-none"></div>
-            
+        <section class="relative min-h-[90vh] flex items-center justify-center pt-20 pb-12 overflow-hidden bg-zinc-50">
             <div class="max-w-7xl mx-auto px-6 relative z-10 text-center animate-fade-in-up">
-                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-brand-500/10 border border-brand-500/20 text-brand-400 text-sm font-medium mb-8">
-                    <span class="w-2 h-2 rounded-full bg-brand-500 animate-pulse"></span>
-                    Disponible para nuevos proyectos
+                <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-black/5 border border-black/10 text-zinc-700 text-sm font-medium mb-8">
+                    <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                    Aceptando nuevos proyectos
                 </div>
-                <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tight mb-6 leading-tight">
-                    Construyo <span class="text-transparent bg-clip-text bg-gradient-to-r from-brand-400 to-indigo-400">experiencias digitales</span><br />
-                    que marcan la diferencia.
+                <h1 class="text-5xl md:text-7xl font-extrabold text-black tracking-tight mb-6 leading-tight">
+                    Diseño páginas web que <br/>
+                    <span class="text-zinc-500">hacen crecer tu negocio.</span>
                 </h1>
-                <p class="text-lg md:text-xl text-slate-400 max-w-2xl mx-auto mb-10 leading-relaxed">
-                    Soy un Ingeniero Full-Stack especializado en crear aplicaciones web modernas, rápidas y escalables con un enfoque absoluto en la calidad y la experiencia de usuario.
+                <p class="text-lg md:text-xl text-zinc-600 max-w-2xl mx-auto mb-10 leading-relaxed">
+                    Te ayudo a conseguir más clientes en internet con una página profesional, rápida y muy fácil de usar. Sin palabras técnicas ni complicaciones.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="#proyectos" class="w-full sm:w-auto px-8 py-4 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-medium transition-all shadow-lg shadow-brand-500/25 flex items-center justify-center gap-2">
-                        Ver mi trabajo <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                    <a href="#paquetes" class="w-full sm:w-auto px-8 py-4 bg-black hover:bg-zinc-800 text-white rounded-xl font-medium transition-all shadow-lg flex items-center justify-center gap-2">
+                        Ver paquetes <i data-lucide="arrow-down" class="w-4 h-4"></i>
                     </a>
-                    <a href="#cotizacion" class="w-full sm:w-auto px-8 py-4 bg-white/5 hover:bg-white/10 border border-white/10 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-2">
-                        Cotizar proyecto
+                    <a href="#contacto" class="w-full sm:w-auto px-8 py-4 bg-white hover:bg-zinc-50 border border-zinc-200 text-black rounded-xl font-medium transition-all flex items-center justify-center gap-2">
+                        Hablar por WhatsApp
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- Services Section -->
-        <section id="servicios" class="py-24 bg-dark-800/50">
+        <!-- Beneficios Section -->
+        <section id="beneficios" class="py-24 bg-white border-b border-zinc-100">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16">
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Mis Servicios</h2>
-                    <p class="text-slate-400 max-w-2xl mx-auto">Soluciones integrales para llevar tu idea desde el concepto hasta la producción.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">¿Por qué necesitas una página profesional?</h2>
+                    <p class="text-zinc-600 max-w-2xl mx-auto">Una buena presencia en internet es como tener una tienda abierta las 24 horas del día.</p>
                 </div>
                 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    <!-- Service 1 -->
-                    <div class="bg-dark-800 rounded-2xl p-8 border border-white/5 hover:border-brand-500/30 transition-all group">
-                        <div class="w-14 h-14 rounded-xl bg-brand-500/10 flex items-center justify-center text-brand-400 mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="layout" class="w-7 h-7"></i>
+                    <div class="bg-zinc-50 rounded-2xl p-8 border border-zinc-200 hover:border-black transition-all">
+                        <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mb-6">
+                            <i data-lucide="trending-up" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Desarrollo Frontend</h3>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Interfaces responsivas, accesibles y con animaciones fluidas utilizando React, Vue o Vanilla JS moderno.
+                        <h3 class="text-xl font-bold text-black mb-3">Más confianza</h3>
+                        <p class="text-zinc-600 leading-relaxed">
+                            Los clientes confían más en un negocio que tiene una página web propia y profesional que en uno que solo usa redes sociales.
                         </p>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Optimización SEO</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Diseño Pixel-Perfect</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-brand-400"></i> Performance extremo</li>
-                        </ul>
                     </div>
 
-                    <!-- Service 2 -->
-                    <div class="bg-dark-800 rounded-2xl p-8 border border-white/5 hover:border-brand-500/30 transition-all group">
-                        <div class="w-14 h-14 rounded-xl bg-purple-500/10 flex items-center justify-center text-purple-400 mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="server" class="w-7 h-7"></i>
+                    <div class="bg-zinc-50 rounded-2xl p-8 border border-zinc-200 hover:border-black transition-all">
+                        <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mb-6">
+                            <i data-lucide="search" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3">Backend & APIs</h3>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Arquitecturas robustas, seguras y escalables con Node.js, Python o Go. Bases de datos SQL y NoSQL.
+                        <h3 class="text-xl font-bold text-black mb-3">Fácil de encontrar</h3>
+                        <p class="text-zinc-600 leading-relaxed">
+                            Aparecerás en Google cuando las personas busquen los productos o servicios que tú ofreces en tu ciudad.
                         </p>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Autenticación Segura</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> APIs REST & GraphQL</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-purple-400"></i> Integración de Pagos</li>
-                        </ul>
                     </div>
 
-                    <!-- Service 3 -->
-                    <div class="bg-dark-800 rounded-2xl p-8 border border-white/5 hover:border-brand-500/30 transition-all group">
-                        <div class="w-14 h-14 rounded-xl bg-emerald-500/10 flex items-center justify-center text-emerald-400 mb-6 group-hover:scale-110 transition-transform">
-                            <i data-lucide="smartphone" class="w-7 h-7"></i>
+                    <div class="bg-zinc-50 rounded-2xl p-8 border border-zinc-200 hover:border-black transition-all">
+                        <div class="w-12 h-12 rounded-full bg-black text-white flex items-center justify-center mb-6">
+                            <i data-lucide="smartphone" class="w-6 h-6"></i>
                         </div>
-                        <h3 class="text-xl font-bold text-white mb-3">UI/UX Design</h3>
-                        <p class="text-slate-400 mb-6 leading-relaxed">
-                            Diseño centrado en el usuario. Wireframes, prototipos y sistemas de diseño para asegurar una experiencia coherente.
+                        <h3 class="text-xl font-bold text-black mb-3">Funciona en celulares</h3>
+                        <p class="text-zinc-600 leading-relaxed">
+                            Más del 80% de las visitas son desde un teléfono. Tu página estará adaptada para verse perfecta y rápida en cualquier pantalla.
                         </p>
-                        <ul class="space-y-2 text-sm text-slate-300">
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Prototipado en Figma</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Investigación UX</li>
-                            <li class="flex items-center gap-2"><i data-lucide="check" class="w-4 h-4 text-emerald-400"></i> Interfaces Modernas</li>
-                        </ul>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section (Placeholder) -->
-        <section id="proyectos" class="py-24">
+        <!-- Pricing / Paquetes Section -->
+        <section id="paquetes" class="py-24 bg-zinc-50">
             <div class="max-w-7xl mx-auto px-6">
-                <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-6">
-                    <div>
-                        <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Proyectos Destacados</h2>
-                        <p class="text-slate-400 max-w-2xl">Una selección de trabajos recientes que demuestran mi capacidad técnica.</p>
-                    </div>
-                    <a href="https://github.com/tu-usuario" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 text-brand-400 hover:text-brand-300 font-medium transition-colors">
-                        Ver GitHub <i data-lucide="external-link" class="w-4 h-4"></i>
-                    </a>
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">Planes y Precios</h2>
+                    <p class="text-zinc-600 max-w-2xl mx-auto">Soluciones transparentes, sin costos ocultos. Todo lo que necesitas para estar en internet.</p>
                 </div>
 
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- Project Card -->
-                    <article class="group rounded-2xl bg-dark-800 border border-white/5 overflow-hidden">
-                        <div class="aspect-video bg-dark-700 relative overflow-hidden flex items-center justify-center">
-                            <!-- Placeholder image -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-dark-700 to-dark-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                                <i data-lucide="image" class="w-16 h-16 text-white/10"></i>
-                            </div>
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                    <!-- Paquete Presencia -->
+                    <div class="bg-white rounded-3xl p-8 border border-zinc-200 shadow-sm flex flex-col">
+                        <h3 class="text-2xl font-bold text-black mb-2">Básico / Presencia</h3>
+                        <p class="text-zinc-500 mb-6 text-sm">Perfecto para negocios que recién empiezan y quieren una tarjeta de presentación digital.</p>
+                        <div class="mb-8">
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">1 página principal larga (Landing Page)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Diseño adaptado a celulares</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Botón de WhatsApp directo</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Formulario de contacto básico</span>
+                                </li>
+                                <li class="flex items-start gap-3 opacity-40">
+                                    <i data-lucide="minus" class="w-5 h-5 text-zinc-400 shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-500">Venta de productos en línea</span>
+                                </li>
+                            </ul>
                         </div>
-                        <div class="p-8">
-                            <div class="flex gap-2 mb-4">
-                                <span class="px-2 py-1 rounded-md bg-brand-500/10 text-brand-400 text-xs font-semibold">React</span>
-                                <span class="px-2 py-1 rounded-md bg-white/5 text-slate-300 text-xs font-semibold">Node.js</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">E-Commerce Moderno</h3>
-                            <p class="text-slate-400 mb-6 line-clamp-2">Plataforma de comercio electrónico completa con panel de administración, integración de Stripe y diseño ultra-rápido.</p>
-                            <a href="#" class="text-white hover:text-brand-400 font-medium inline-flex items-center gap-2 transition-colors">
-                                Ver detalles <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
-                        </div>
-                    </article>
+                        <a href="https://wa.me/520000000006?text=Hola,%20me%20interesa%20el%20paquete%20Básico." class="mt-auto w-full py-3 bg-white border-2 border-black hover:bg-black hover:text-white text-black text-center rounded-xl font-bold transition-colors">
+                            Elegir Básico
+                        </a>
+                    </div>
 
-                    <!-- Project Card -->
-                    <article class="group rounded-2xl bg-dark-800 border border-white/5 overflow-hidden">
-                        <div class="aspect-video bg-dark-700 relative overflow-hidden flex items-center justify-center">
-                            <!-- Placeholder image -->
-                            <div class="absolute inset-0 bg-gradient-to-br from-dark-700 to-dark-900 flex items-center justify-center group-hover:scale-105 transition-transform duration-500">
-                                <i data-lucide="image" class="w-16 h-16 text-white/10"></i>
-                            </div>
+                    <!-- Paquete Negocio (Destacado) -->
+                    <div class="bg-black rounded-3xl p-8 border border-zinc-800 shadow-xl flex flex-col relative transform lg:-translate-y-4">
+                        <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white text-black px-4 py-1 rounded-full text-xs font-bold uppercase tracking-wider">
+                            Más Popular
                         </div>
-                        <div class="p-8">
-                            <div class="flex gap-2 mb-4">
-                                <span class="px-2 py-1 rounded-md bg-emerald-500/10 text-emerald-400 text-xs font-semibold">Vue.js</span>
-                                <span class="px-2 py-1 rounded-md bg-white/5 text-slate-300 text-xs font-semibold">Tailwind</span>
-                            </div>
-                            <h3 class="text-2xl font-bold text-white mb-2">SaaS Dashboard</h3>
-                            <p class="text-slate-400 mb-6 line-clamp-2">Interfaz de panel de control para un producto SaaS, con gráficos interactivos, modo oscuro nativo y reportes en tiempo real.</p>
-                            <a href="#" class="text-white hover:text-brand-400 font-medium inline-flex items-center gap-2 transition-colors">
-                                Ver detalles <i data-lucide="arrow-right" class="w-4 h-4"></i>
-                            </a>
+                        <h3 class="text-2xl font-bold text-white mb-2">Empresarial</h3>
+                        <p class="text-zinc-400 mb-6 text-sm">Para empresas establecidas que buscan mostrar catálogos, servicios y dar mucha confianza.</p>
+                        <div class="mb-8">
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-white shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-300">Hasta 5 páginas (Inicio, Nosotros, Servicios, etc.)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-white shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-300">Diseño profesional y único</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-white shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-300">Optimización para aparecer en Google (SEO)</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-white shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-300">Formulario avanzado y botones de contacto</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-white shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-300">Correos corporativos</span>
+                                </li>
+                            </ul>
                         </div>
-                    </article>
+                        <a href="https://wa.me/520000000006?text=Hola,%20me%20interesa%20el%20paquete%20Empresarial." class="mt-auto w-full py-3 bg-white hover:bg-zinc-200 text-black text-center rounded-xl font-bold transition-colors">
+                            Elegir Empresarial
+                        </a>
+                    </div>
+
+                    <!-- Paquete Tienda -->
+                    <div class="bg-white rounded-3xl p-8 border border-zinc-200 shadow-sm flex flex-col">
+                        <h3 class="text-2xl font-bold text-black mb-2">Tienda en Línea</h3>
+                        <p class="text-zinc-500 mb-6 text-sm">Comienza a vender tus productos por internet de forma automática y segura.</p>
+                        <div class="mb-8">
+                            <ul class="space-y-4">
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Catálogo de productos autoadministrable</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Carrito de compras y pagos con tarjeta</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Panel para gestionar pedidos e inventario</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Diseño enfocado en vender</span>
+                                </li>
+                                <li class="flex items-start gap-3">
+                                    <i data-lucide="check" class="w-5 h-5 text-black shrink-0 mt-0.5"></i>
+                                    <span class="text-zinc-700">Opciones de envío integradas</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <a href="https://wa.me/520000000006?text=Hola,%20me%20interesa%20una%20Tienda%20en%20Línea." class="mt-auto w-full py-3 bg-white border-2 border-black hover:bg-black hover:text-white text-black text-center rounded-xl font-bold transition-colors">
+                            Crear mi tienda
+                        </a>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- Quote / Cotización Section -->
-        <section id="cotizacion" class="py-24 bg-dark-800/50">
+        <section id="cotizacion" class="py-24 bg-white border-t border-zinc-100">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-12">
-                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-2xl bg-brand-500/10 text-brand-400 mb-6">
-                        <i data-lucide="calculator" class="w-8 h-8"></i>
+                    <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-zinc-100 text-black mb-6">
+                        <i data-lucide="message-square-plus" class="w-8 h-8"></i>
                     </div>
-                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Cotización Personalizada</h2>
-                    <p class="text-slate-400">Cuéntame sobre tu proyecto para recibir un estimado de tiempo y costo.</p>
+                    <h2 class="text-3xl md:text-4xl font-bold text-black mb-4">¿Necesitas algo distinto o a medida?</h2>
+                    <p class="text-zinc-600">Dime qué tienes en mente. Llena este formulario y te enviaré un presupuesto sin compromiso.</p>
                 </div>
 
-                <div class="bg-dark-900 rounded-3xl p-8 md:p-12 border border-white/5 shadow-2xl">
+                <div class="bg-zinc-50 rounded-3xl p-8 md:p-12 border border-zinc-200">
                     <form id="quote-form" class="space-y-8" novalidate>
                         <!-- Información Personal -->
                         <div class="space-y-6">
-                            <h3 class="text-xl font-semibold text-white border-b border-white/10 pb-2">Información de Contacto</h3>
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="form-group">
-                                    <label for="q_name" class="block text-sm font-medium text-slate-300 mb-2">Nombre completo *</label>
-                                    <input type="text" id="q_name" name="name" required class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" placeholder="Ej. Juan Pérez">
-                                    <span class="error-msg text-red-400 text-xs mt-1 hidden">Por favor ingresa tu nombre.</span>
+                                    <label for="q_name" class="block text-sm font-semibold text-zinc-800 mb-2">Tu nombre completo</label>
+                                    <input type="text" id="q_name" name="name" required class="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-black focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors" placeholder="Ej. Juan Pérez">
+                                    <span class="error-msg text-red-500 text-xs mt-1 hidden">Por favor ingresa tu nombre.</span>
                                 </div>
                                 <div class="form-group">
-                                    <label for="q_email" class="block text-sm font-medium text-slate-300 mb-2">Correo electrónico *</label>
-                                    <input type="email" id="q_email" name="email" required class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" placeholder="tu@correo.com">
-                                    <span class="error-msg text-red-400 text-xs mt-1 hidden">Ingresa un correo válido.</span>
+                                    <label for="q_phone" class="block text-sm font-semibold text-zinc-800 mb-2">Tu número de WhatsApp</label>
+                                    <input type="tel" id="q_phone" name="phone" required class="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-black focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors" placeholder="Para escribirte directo">
+                                    <span class="error-msg text-red-500 text-xs mt-1 hidden">El número es obligatorio.</span>
                                 </div>
-                            </div>
-                            <div class="form-group">
-                                <label for="q_phone" class="block text-sm font-medium text-slate-300 mb-2">Teléfono / WhatsApp</label>
-                                <input type="tel" id="q_phone" name="phone" class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors" placeholder="+52 000 000 0000">
                             </div>
                         </div>
 
                         <!-- Detalles del Proyecto -->
-                        <div class="space-y-6 pt-4">
-                            <h3 class="text-xl font-semibold text-white border-b border-white/10 pb-2">Detalles del Proyecto</h3>
+                        <div class="space-y-6 pt-4 border-t border-zinc-200">
                             
                             <div class="form-group">
-                                <label for="q_service" class="block text-sm font-medium text-slate-300 mb-2">Tipo de servicio *</label>
-                                <select id="q_service" name="service" required class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors appearance-none">
-                                    <option value="" disabled selected>Selecciona un servicio</option>
-                                    <option value="landing">Landing Page / Web Corporativa</option>
-                                    <option value="ecommerce">E-Commerce (Tienda en línea)</option>
-                                    <option value="webapp">Aplicación Web / SaaS</option>
-                                    <option value="uiux">Diseño UI/UX solamente</option>
-                                    <option value="other">Otro / Consultoría</option>
+                                <label for="q_service" class="block text-sm font-semibold text-zinc-800 mb-2">¿Qué tipo de web te imaginas?</label>
+                                <select id="q_service" name="service" required class="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-black focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors appearance-none">
+                                    <option value="" disabled selected>Elige una opción...</option>
+                                    <option value="landing">Solo una página para que me contacten</option>
+                                    <option value="empresa">Página completa para mi empresa o negocio</option>
+                                    <option value="tienda">Una tienda en línea para vender productos</option>
+                                    <option value="sistema">Un sistema especial (citas, reservas, etc.)</option>
+                                    <option value="otro">No estoy seguro, necesito asesoría</option>
                                 </select>
-                                <span class="error-msg text-red-400 text-xs mt-1 hidden">Selecciona un servicio.</span>
+                                <span class="error-msg text-red-500 text-xs mt-1 hidden">Por favor selecciona una opción.</span>
                             </div>
 
                             <div class="form-group">
-                                <label for="q_budget" class="block text-sm font-medium text-slate-300 mb-2">Presupuesto aproximado (USD)</label>
-                                <select id="q_budget" name="budget" class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors appearance-none">
-                                    <option value="<1000">Menos de $1,000</option>
-                                    <option value="1000-3000" selected>$1,000 - $3,000</option>
-                                    <option value="3000-5000">$3,000 - $5,000</option>
-                                    <option value=">5000">Más de $5,000</option>
-                                    <option value="unknown">No estoy seguro</option>
-                                </select>
-                            </div>
-
-                            <div class="form-group">
-                                <label for="q_message" class="block text-sm font-medium text-slate-300 mb-2">Cuéntame sobre las funcionalidades clave *</label>
-                                <textarea id="q_message" name="message" rows="4" required class="w-full bg-dark-800 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-brand-500 focus:ring-1 focus:ring-brand-500 transition-colors resize-none" placeholder="Describe brevemente qué necesitas construir..."></textarea>
-                                <span class="error-msg text-red-400 text-xs mt-1 hidden">El mensaje es obligatorio.</span>
+                                <label for="q_message" class="block text-sm font-semibold text-zinc-800 mb-2">Platícame un poco más de tu negocio o idea</label>
+                                <textarea id="q_message" name="message" rows="4" required class="w-full bg-white border border-zinc-300 rounded-xl px-4 py-3 text-black focus:outline-none focus:border-black focus:ring-1 focus:ring-black transition-colors resize-none" placeholder="Vendo zapatos y quiero... o Soy abogado y necesito que la gente vea mis servicios..."></textarea>
+                                <span class="error-msg text-red-500 text-xs mt-1 hidden">El mensaje no puede estar vacío.</span>
                             </div>
                         </div>
 
                         <!-- Feedback Box -->
                         <div id="quote-feedback" class="hidden p-4 rounded-xl text-sm font-medium flex items-start gap-3"></div>
 
-                        <button type="submit" id="btn-submit-quote" class="w-full py-4 bg-brand-600 hover:bg-brand-500 text-white rounded-xl font-semibold transition-all shadow-lg shadow-brand-500/20 flex items-center justify-center gap-2 group relative overflow-hidden">
+                        <button type="submit" id="btn-submit-quote" class="w-full py-4 bg-black hover:bg-zinc-800 text-white rounded-xl font-bold transition-all shadow-md flex items-center justify-center gap-2 relative overflow-hidden group">
                             <span class="relative z-10 flex items-center gap-2">
-                                <span class="btn-text">Solicitar Cotización</span>
+                                <span class="btn-text">Enviar información</span>
                                 <i data-lucide="send" class="w-4 h-4 btn-icon group-hover:translate-x-1 transition-transform"></i>
                             </span>
-                            <div class="btn-loader hidden absolute inset-0 flex items-center justify-center bg-brand-600 z-20">
+                            <div class="btn-loader hidden absolute inset-0 flex items-center justify-center bg-black z-20">
                                 <i data-lucide="loader-2" class="w-5 h-5 animate-spin"></i>
                             </div>
                         </button>
@@ -327,23 +327,20 @@
         </section>
 
         <!-- Contact Section -->
-        <section id="contacto" class="py-24 relative overflow-hidden">
-            <!-- decorative circles -->
-            <div class="absolute top-0 right-0 w-64 h-64 bg-brand-500/10 rounded-full blur-[80px]"></div>
-            
+        <section id="contacto" class="py-24 bg-black text-white relative overflow-hidden">
             <div class="max-w-4xl mx-auto px-6 text-center">
-                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">¿Listo para empezar?</h2>
-                <p class="text-slate-400 mb-10 text-lg">
-                    Si prefieres un contacto directo, escríbeme y responderé en menos de 24 horas.
+                <h2 class="text-3xl md:text-4xl font-bold mb-6">¿Quieres respuestas rápidas?</h2>
+                <p class="text-zinc-400 mb-10 text-lg">
+                    No te compliques. Mándame un mensaje directamente a mi WhatsApp o un correo y platiquemos hoy mismo.
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="mailto:hola@tudominio.com" class="w-full sm:w-auto px-8 py-4 bg-dark-800 border border-white/10 hover:border-white/30 text-white rounded-xl font-medium transition-all flex items-center justify-center gap-3">
-                        <i data-lucide="mail" class="w-5 h-5 text-brand-400"></i>
-                        hola@tudominio.com
-                    </a>
-                    <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 text-[#25D366] rounded-xl font-medium transition-all flex items-center justify-center gap-3">
+                    <a href="https://wa.me/520000000006" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto px-8 py-4 bg-white text-black hover:bg-zinc-200 rounded-xl font-bold transition-all flex items-center justify-center gap-3">
                         <svg class="w-5 h-5 fill-current" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51a12.8 12.8 0 0 0-.57-.01c-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.82 9.82 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
                         Escribir por WhatsApp
+                    </a>
+                    <a href="mailto:anubisorg01@gmail.com" class="w-full sm:w-auto px-8 py-4 bg-zinc-900 border border-zinc-700 hover:border-zinc-500 text-white rounded-xl font-bold transition-all flex items-center justify-center gap-3">
+                        <i data-lucide="mail" class="w-5 h-5"></i>
+                        anubisorg01@gmail.com
                     </a>
                 </div>
             </div>
@@ -351,28 +348,15 @@
     </main>
 
     <!-- Footer -->
-    <footer class="bg-dark-900 border-t border-white/5 py-12">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-6">
-            <div class="flex items-center gap-2 opacity-80">
-                <i data-lucide="code-2" class="w-5 h-5 text-brand-400"></i>
-                <span class="text-white font-semibold tracking-tight">Dev<span class="text-brand-400">Pro</span></span>
+    <footer class="bg-white border-t border-zinc-200 py-12">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col items-center justify-center gap-4 text-center">
+            <div class="flex items-center gap-2">
+                <i data-lucide="monitor" class="w-5 h-5 text-black"></i>
+                <span class="text-black font-bold tracking-tight">Creación<span class="text-zinc-500">Web</span></span>
             </div>
-            
-            <p class="text-slate-500 text-sm">
-                &copy; <span id="current-year"></span> DevPro. Todos los derechos reservados.
+            <p class="text-zinc-500 text-sm">
+                &copy; <span id="current-year"></span> Todos los derechos reservados.
             </p>
-            
-            <div class="flex items-center gap-4">
-                <a href="#" class="text-slate-500 hover:text-white transition-colors" aria-label="LinkedIn">
-                    <i data-lucide="linkedin" class="w-5 h-5"></i>
-                </a>
-                <a href="#" class="text-slate-500 hover:text-white transition-colors" aria-label="GitHub">
-                    <i data-lucide="github" class="w-5 h-5"></i>
-                </a>
-                <a href="#" class="text-slate-500 hover:text-white transition-colors" aria-label="Twitter">
-                    <i data-lucide="twitter" class="w-5 h-5"></i>
-                </a>
-            </div>
         </div>
     </footer>
 
