@@ -1,0 +1,45 @@
+/* CSS Variables & Utilities */
+:root {
+    --brand-glow: rgba(59, 130, 246, 0.15);
+}
+
+/* Animations that are not easily done with Tailwind classes */
+html {
+    scroll-padding-top: 5rem;
+}
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+/* Input styles reset for validation */
+.form-group input:invalid:not(:focus):not(:placeholder-shown),
+.form-group textarea:invalid:not(:focus):not(:placeholder-shown),
+.form-group select:invalid:not(:focus):not(:placeholder-shown) {
+    border-color: #f87171;
+}
+
+.form-group input:invalid:not(:focus):not(:placeholder-shown) ~ .error-msg,
+.form-group textarea:invalid:not(:focus):not(:placeholder-shown) ~ .error-msg,
+.form-group select:invalid:not(:focus):not(:placeholder-shown) ~ .error-msg {
+    display: block;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155; 
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #475569; 
+}
